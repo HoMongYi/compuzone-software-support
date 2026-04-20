@@ -1,0 +1,98 @@
+/*레이어 팝업 스타일*/
+.layer_pop { position: relative; text-align: left;  border:1px solid #b7bbc0; background-color: #fff; box-sizing: border-box; font-family: 'spoqa R'; letter-spacing: -1px;}
+.layer_pop h3 {font-size:30px; color:#383838; margin-bottom:30px; font-family: 'noto-B'; font-weight:normal;}
+.layer_pop p {font-size: 14px; margin: 10px 0; color:#ff4a4a;}
+.layer_pop .b_close {position:absolute; top:60px; right:60px; width:30px; height:30px; background: url(//image5.compuzone.co.kr/img/images/product_detail/btn_pd_new.png) -287px -157px no-repeat;}
+.layer_pop .s_close {position:absolute !important; padding:0 !important; top:20px; right:20px; width:16px; height:16px; background: url(//image5.compuzone.co.kr/img/images/product_detail/btn_pd_new.png) -350px -130px no-repeat;}
+.layer_pop .wt {background-position:-336px -157px; top:20px; right:20px;}
+.layer_pop .title {font-size:18px; color:#383838; margin-bottom:10px; margin-top:0px; font-family: 'noto-B'; font-weight:normal;}
+.layer_pop .alm_box {font-size:14px; color:#383838; font-family: 'noto-R'; font-weight:normal; text-align:center; background: #f9fafa; padding:10px 0;}
+.layer_pop .ico_qmark {background: url(//image5.compuzone.co.kr/img/images/product_detail/btn_pd_new.png) -12px -38px; width: 17px; height: 17px; display: inline-block; margin-left: 3px; vertical-align: text-top;
+    margin-top: 2px; cursor: pointer;}
+.layer_pop .ico_arrow_r {background: url(//image5.compuzone.co.kr/img/images/product_detail/btn_pd_new.png) -322px -8px; width: 7px; height: 11px; display: inline-block; margin-left: 6px; vertical-align: text-top;
+    margin-top: 5px; cursor: pointer;}
+.layer_pop .text_box {background: #f9fafa; padding: 20px; border-bottom: 1px solid #dbdddf; border-top: 1px solid #dbdddf; font-size:13px;}
+.layer_pop .info_box {font-size:13px; color:#4f4f4f; margin-bottom: 10px; display: inline-block;}
+.layer_pop .btn_go {padding: 11px 0; width: auto; background: #f9fafa; border: 1px solid #dee0e2;  display: block;  text-align: center;  font-size: 13px; text-decoration:none; margin-top:20px;}
+.layer_pop .btn_go:hover {text-decoration:none;}
+.layer_pop .co_red {color:#ff5555; }
+
+/*맞춤가 레이어*/
+.layer_pop .sale_price_inner {border-top:1px solid #000;}
+.layer_pop .sale_price_inner .list {overflow: hidden; border-bottom: 1px solid #dbdddf; padding: 12px 0;}
+.layer_pop .sale_price_inner .list dt {float: left; color: 4f4f4f; font-size: 14px;}
+.layer_pop .sale_price_inner .list dd {float: right; font-size: 14px;}
+.layer_pop .sale_price_inner .bold {font-weight:bold; color:#000;}
+
+.layer_pop .sale_price_inner .sale_detail {background: #f9fafa; padding: 20px; border-bottom: 1px solid #dbdddf;}
+.layer_pop .sale_price_inner .sale_detail dl {overflow: hidden;}
+.layer_pop .sale_price_inner .sale_detail dl dt {float: left; color:#4f4f4f; font-size: 12px;}
+.layer_pop .sale_price_inner .sale_detail dl dd {float: right; font-size: 12px;}
+
+.layer_pop .sale_price_inner .total_price {overflow:hidden; margin-top:15px; font-size:16px;}
+.layer_pop .sale_price_inner .total_price .txt {float:left; color:#000; font-family: 'noto-B'; font-weight:normal;}
+.layer_pop .sale_price_inner .total_price .price {float:right; color:#ff5555; font-family: 'noto-B'; font-weight:normal;}
+
+.layer_pop .sale_detail .d_number {border-bottom:1px dotted #dbdddf; padding: 15px;}
+.layer_pop .sale_detail .d_number:last-child {border-bottom:0;}
+.layer_pop .sale_detail .d_number .num {font-weight:bold; margin-right:5px;}
+.layer_pop .sale_detail .d_number .color_b{color:#1c8fed;}
+.layer_pop .sale_detail .d_number .product_name{ color:#6c6c6c; margin: 0 0 0 15px; font-size:12px; }
+
+.layer_pop .sale_detail .tie {border-bottom:0; padding:2px 0;}
+
+/* ********** 83494 팝업 설정 0516 ********** */
+.basic_layer_pop { position: fixed; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: 200; text-align: left; border: 1px solid #b7bbc0; background-color: #fff; box-sizing: border-box; font-family: 'spoqa R'; letter-spacing: -1px; }
+.basic_layer_pop a:hover{    text-decoration: none;}
+.basic_layer_pop .s_close { position: absolute ; padding: 0 ; top: 20px; right: 20px; width: 16px; height: 16px; background: url(//image5.compuzone.co.kr/img/images/product_detail/btn_pd_new.png) -350px -130px no-repeat; }
+.basic_layer_pop .title { font-size: 18px; color: #383838; margin-bottom: 10px; margin-top: 0px; font-family: 'noto-B'; font-weight: normal; }
+.basic_layer_pop .qna_write { border-top: 1px solid #000; padding: 20px 0 0; }
+.basic_layer_pop .blacktit{color: #1a1a1a; font-size: 14px;}
+.basic_layer_pop .bluetit { color: #1a75d2;}
+.basic_layer_pop .btn_area button { width: 50%; float: left; border: 1px solid #ccc; padding: 15px 0; font-family: 'noto-R'; font-size: 15px; }
+.basic_layer_pop .btn_area button.bk { width: 50%; float: left; border: 1px solid #000; background: #000; color: #fff; }
+.basic_layer_pop .blacktit a{cursor: pointer;}
+/* 90031 출장 AS 쿠폰 관리 : 시리얼 정보 팝업  230125 */
+.serial_info_wrap{position: relative;}
+.basic_layer_pop.serial_info_pop { width: 410px; padding: 30px; display: block; position: absolute; left: 0; top: 40px; transform: translate(0, 0); }
+.basic_layer_pop.serial_info_pop .ser_blue_box { width: 100%; box-sizing: border-box; background: #f3faff; padding: 15px; }
+.basic_layer_pop.serial_info_pop .ser_blue_box p { color: #6C6C6C; font-size: 13px; margin-top: 2px; }
+.basic_layer_pop.serial_info_pop .ser_blue_box p:first-child{margin-top: 0;}
+.basic_layer_pop.serial_info_pop .serial_box { border: 1px solid #E8E8E8; margin-top: 20px; }
+.basic_layer_pop.serial_info_pop .ser_top { background: #F9F9F9; border-bottom: 1px solid #E8E8E8; padding: 15px 20px; position: relative; }
+.basic_layer_pop.serial_info_pop .serial_numberT { font-size: 14px; font-family: 'Noto-B'; color: #1A1A1A; }
+.basic_layer_pop.serial_info_pop .serial_number { font-size: 14px; font-family: 'Noto-M'; color: #1A1A1A; margin-left: 15px; }
+.basic_layer_pop.serial_info_pop .serial_period { color: #949494; font-size: 14px; letter-spacing: -0.025em; margin-top: 5px; font-family: 'spoqa R'; }
+.basic_layer_pop.serial_info_pop .serial_progress { position: absolute; top: 15px; right: 20px; font-family: 'Noto-B'; font-size: 14px; }
+.basic_layer_pop.serial_info_pop .serial_progress.active { color: #F14738; }
+.basic_layer_pop.serial_info_pop .ser_content { padding: 15px 20px;}
+.basic_layer_pop.serial_info_pop .ser_content li { list-style: none; margin-bottom: 5px; display: flex; }
+.basic_layer_pop.serial_info_pop .ser_content li p { color: #949494; font-size: 14px; font-family: 'Noto-R'; letter-spacing: -0.025em; word-break: break-all;}
+.basic_layer_pop.serial_info_pop .ser_content li p.li_n{ margin-right: 5px;}
+
+/* 230706 99030 배송비 환불 신청 및 안내 추가 요청 */
+.refund_info_pop{border: 1px solid #b4b4b4;}
+.paymentInfo_wrap .blue_box{padding: 10px 20px;}
+.paymentInfo_wrap .blue_box.refund_box{height: auto; margin: 6px 0 0; cursor: pointer; position: relative;}
+.paymentInfo_wrap .blue_box.refund_box h2{color: #1a1a1a;}
+.basic_layer_pop.refund_info_pop{display:none; position:fixed; top:50%; left:50%; transform:Translate(-50%, -50%);}
+.basic_layer_pop.refund_info_pop .title{color: #1a1a1a; margin-bottom: 15px; text-align: center;}
+.basic_layer_pop.refund_info_pop .qna_write{padding: 15px 0 0; border-top: 1px solid #1a1a1a; line-height: 26px;}
+.basic_layer_pop.refund_info_pop .qna_write .blacktit{margin:0 0 20px 0; font-size: 16px; text-align: left;}
+.basic_layer_pop.refund_info_pop .qna_write .blacktit span{margin-top: 10px; font-size: 13px; font-family:"맑은고딕"; color: #949494; display: block;}
+.basic_layer_pop.refund_info_pop .myP_btnwrap21{width: 100%;}
+.basic_layer_pop.refund_info_pop .myP_btnwrap21 .myP_BBbtn{width: 100%; height: 50px; line-height: 48px;}
+.basic_layer_pop.refund_info_pop .table_wrap table tr th{padding: 15px; text-align: center; font-size: 14px; font-family: 'Noto-M';}
+.basic_layer_pop.refund_info_pop .table_wrap table tr td{padding: 15px 10px; font-size: 14px; font-family: 'Noto-R';}
+.basic_layer_pop.refund_info_pop .table_wrap table tr:nth-child(5) td{padding: 5px 10px;}
+.basic_layer_pop.refund_info_pop .table_wrap table tr:nth-child(6) td{padding: 5px 10px;}
+.basic_layer_pop.refund_info_pop .table_wrap table tr td .inputWrap{width: 100px;}
+.basic_layer_pop.refund_info_pop .table_wrap table tr td .inputWrap input{padding: 0 10px;}
+.basic_layer_pop.refund_info_pop .table_wrap table tr td .buttonWrap {display:inline-block;}
+.basic_layer_pop.refund_info_pop .table_wrap table tr td .buttonWrap button {display:inline-block; min-width:44px; height:26px; padding:0 10px; background:#f9f9f9; line-height:25px; border:1px solid #d8d8d8; border-radius:2px; font-size:12px; font-family:'맑은고딕'; font-weight: normal; color:#1a1a1a;}
+.basic_layer_pop.refund_info_pop .table_wrap table tr td p{display: inline-block; margin-left: 10px;}
+.basic_layer_pop.refund_info_pop .table_wrap table tr td p.br {margin-left:0; margin-bottom:10px;}
+.basic_layer_pop.refund_info_pop .table_wrap table tr td .myP_select{width: 100%; box-sizing: border-box;}
+.basic_layer_pop.refund_info_pop .table_wrap table tr td .myP_select select{color: #1a1a1a;}
+.inputWrap:hover{border: 1px solid #1a1a1a !important;}
+.myP_select:hover select {border: 1px solid #1a1a1a !important; background: url(//image5.compuzone.co.kr/img/images/svg_icon/3A3A3A/icon_line_down_12.svg) 93% center no-repeat!important; background-size: 14px;}

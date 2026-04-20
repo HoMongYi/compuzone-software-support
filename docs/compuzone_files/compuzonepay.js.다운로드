@@ -1,0 +1,103 @@
+var connect_pay = new Object();
+
+function cert_compuzone_pay(mid){
+	$('.compay_plusbtn').attr("href","javascript:set_compuzone_pay_account('"+mid+"');");
+}
+
+function init_compuzone_pay(customerKey){
+	if(Object.keys(connect_pay).length < 1){ // 객체 생성 전에만 타도록
+		var clientKey = 'live_ck_YoEjb0gm23PG1qRdXXW8pGwBJn5e';	// client key는 공개 가능키(결제창 오픈)
+		
+		// test 
+		if(window.location.hostname == 'www3.compuzone.co.kr' || window.location.hostname == 'www.dev.coz'){
+			clientKey = 'test_ck_Kma60RZblrqlk76DoLRVwzYWBn14';		
+		}
+		
+		var endpoint = window.location.protocol + "//" + window.location.hostname;
+		connect_pay = ConnectPay(clientKey,customerKey,{
+			redirectUrl: endpoint + '/compuzonepay/compuzonepay_auth.php/authorization',
+			ui : {
+				highlightColor: '#26C2E3',
+				buttonStyle: 'default'
+			}
+		});	
+	}
+}
+
+function get_compuzone_pay_account(){		
+	return new Promise(function(resolve, reject) {		
+		connect_pay.getPaymentMethods()
+		.then(function(methods){
+			resolve(methods);
+		})
+		.catch(function(error){
+			if(error.code == 'NEED_AGREEMENT_WITH_TERMS'){		
+				resolve(error.code);
+			}else{
+				reject(error.message);
+			}
+		});		
+	});
+}
+
+function set_compuzone_pay_account(mid){
+	init_compuzone_pay(mid);
+
+	connect_pay.addPaymentMethod()
+  .then(function (methods) {
+  	var last_reg_method = '';
+  	var compare_reg_at = '';
+  	
+  	$.each(methods, function(key, value){ 
+		  $.each(value, function(idx, payments){
+		  	var reg_at = payments['registeredAt'];
+		  	if(!compare_reg_at){
+		  		compare_reg_at = reg_at;
+		  		last_reg_method = payments['id'];
+		  	}else{
+		  		if(compare_reg_at < reg_at){
+		  			compare_reg_at = reg_at;	
+		  			last_reg_method = payments['id'];	  		
+		  		}
+		  	}
+		  });
+		});
+  	
+  	if(last_reg_method){
+  		$('#SelectCpayMethodID').val(last_reg_method);	
+  	} 
+  	
+  	document.getElementById('PreCheckedAccount').value = '1';
+  	setWhichPayment('11');
+    // 성공 처리
+  })
+  .catch(function (error) {
+    if (error.code === 'USER_CANCEL') {
+      // 사용자가 결제창을 닫은 경우 에러 처리
+    }
+  })
+}
+
+function open_compuzone_pay_setting(mid){
+	init_compuzone_pay(mid);
+	
+	connect_pay.openSettings().catch(function (error) {
+	  if (error.code === 'USER_CANCEL') {
+	    // 사용자가 결제창을 닫은 경우 에러 처리
+	  }
+	})
+}
+
+function withdraw_compuzone_pay(mid){	
+	init_compuzone_pay(mid);
+	
+	$.ajax({
+		url : '../compuzonepay/compuzonepay_auth.php',
+		type : 'post',
+		data : {'actype':'withdraw'},
+		cache:false,
+		success : function(res){		
+			//console.log(res);
+		}
+	});		
+}

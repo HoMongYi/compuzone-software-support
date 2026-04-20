@@ -1,0 +1,21 @@
+@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumSquare.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		font-family: 'NanumSquareB', 'NanumSquare', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+	}
+}
+
+@layer utilities {
+	.truncate-url {
+		max-width: 320px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		display: inline-block;
+	}
+}

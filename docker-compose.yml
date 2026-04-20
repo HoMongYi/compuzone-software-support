@@ -1,0 +1,44 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: compuzone-software-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: compuzone
+      POSTGRES_USER: compuzone
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "192.168.0.221:10002:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U compuzone"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build: .
+    container_name: compuzone-software-api
+    restart: unless-stopped
+    ports:
+      - "192.168.0.221:10001:8000"
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+    depends_on:
+      db:
+        condition: service_healthy
+
+  web:
+    image: nginx:alpine
+    container_name: compuzone-software-web
+    restart: unless-stopped
+    ports:
+      - "192.168.0.221:10000:80"
+    volumes:
+      - ./build:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/nginx.conf
+
+
+volumes:
+  pgdata:

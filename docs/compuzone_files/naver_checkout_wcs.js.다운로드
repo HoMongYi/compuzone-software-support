@@ -1,0 +1,4 @@
+/*네이버 유입 경로 스크립트*/
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "s_1d39c489270d";
+wcs.inflow('compuzone.co.kr');

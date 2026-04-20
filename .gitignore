@@ -1,0 +1,38 @@
+node_modules/
+build/
+.svelte-kit/
+dist/
+
+# Tauri
+src-tauri/target/
+src-tauri/gen/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+*.db
+*.sqlite
+result.csv
+
+# Python 가상환경
+venv/
+.venv/
+env/
+*.egg-info/
+
+# 환경변수 설정 스크립트 (실제 API 키 포함)
+set-env.ps1
+set-env.sh
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Local Netlify folder
+.netlify
